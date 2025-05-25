@@ -1,0 +1,31 @@
+{
+    clang_arch_x86_64_plat_mingw = {
+        arch = "x86_64",
+        plat = "mingw",
+        __global = true,
+        __checked = {
+            program = [[D:\Portable\msys64\ucrt64\bin\clang.exe]],
+            name = "clang"
+        }
+    },
+    tool_target_main_mingw_x86_64_cxx = {
+        toolchain_info = {
+            name = "clang",
+            plat = "mingw",
+            arch = "x86_64",
+            cachekey = "clang_arch_x86_64_plat_mingw"
+        },
+        program = [[D:\Portable\msys64\ucrt64\bin\clang]],
+        toolname = "clang"
+    },
+    tool_target_main_mingw_x86_64_ld = {
+        toolchain_info = {
+            name = "clang",
+            plat = "mingw",
+            arch = "x86_64",
+            cachekey = "clang_arch_x86_64_plat_mingw"
+        },
+        program = [[D:\Portable\msys64\ucrt64\bin\clang++]],
+        toolname = "clangxx"
+    }
+}

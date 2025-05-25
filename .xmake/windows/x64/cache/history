@@ -1,0 +1,9 @@
+{
+    cmdlines = {
+        "xmake check",
+        [[xmake l c:\Users\Zcaic\.vscode\extensions\tboox.xmake-vscode-2.4.0\assets\update_intellisense.lua build clangd]],
+        [[xmake l c:\Users\Zcaic\.vscode\extensions\tboox.xmake-vscode-2.4.0\assets\explorer.lua]],
+        [[xmake l c:\Users\Zcaic\.vscode\extensions\tboox.xmake-vscode-2.4.0\assets\explorer.lua]],
+        [[xmake l c:\Users\Zcaic\.vscode\extensions\tboox.xmake-vscode-2.4.0\assets\explorer.lua]]
+    }
+}

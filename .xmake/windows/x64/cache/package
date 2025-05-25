@@ -1,0 +1,24 @@
+{
+    fmt = {
+        linkdirs = [[C:\Users\Zcaic\Desktop\cy\externals\fmt\lib]],
+        links = "fmt",
+        libfiles = [[C:\Users\Zcaic\Desktop\cy\externals\fmt\lib\libfmt.a]],
+        installdir = [[C:\Users\Zcaic\Desktop\cy\externals\fmt]],
+        static = true,
+        version = "11.2.0",
+        __requireconfs = {
+            system = false
+        },
+        sysincludedirs = [[C:\Users\Zcaic\Desktop\cy\externals\fmt\include]],
+        __enabled = true,
+        __requirestr = "fmt 11.2.0"
+    },
+    python3 = {
+        __requireconfs = {
+            system = true
+        },
+        sysincludedirs = [[D:\miniconda3\envs\py12\Include]],
+        __enabled = true,
+        __requirestr = "python3"
+    }
+}

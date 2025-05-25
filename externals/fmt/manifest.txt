@@ -1,0 +1,26 @@
+{
+    arch = "x86_64",
+    artifacts = {
+        installdir = [[C:\Users\Zcaic\Desktop\cy\externals\fmt]]
+    },
+    configs = {
+        debug = false,
+        pic = true,
+        shared = false,
+        toolchains = "clang"
+    },
+    envs = { },
+    mode = "release",
+    name = "fmt",
+    pathenvs = {
+        "CMAKE_PREFIX_PATH",
+        "PYTHONPATH",
+        "DYLD_LIBRARY_PATH",
+        "PATH",
+        "LD_LIBRARY_PATH",
+        "ACLOCAL_PATH",
+        "PKG_CONFIG_PATH"
+    },
+    plat = "mingw",
+    version = "11.2.0"
+}
