@@ -1,0 +1,11 @@
+prefix=E:/CXX/xmake_template/externals/eigen
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: eigen
+Description: %s
+Version: 3.4.0
+Libs:  -L${libdir}
+Libs.private: 
+Cflags:  -I${includedir}

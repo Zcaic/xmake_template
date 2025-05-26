@@ -1,24 +1,34 @@
 {
+    eigen = {
+        __requirestr = "eigen 3.4.0",
+        version = "3.4.0",
+        installdir = [[E:\CXX\xmake_template\externals\eigen]],
+        sysincludedirs = [[E:\CXX\xmake_template\externals\eigen\include]],
+        __enabled = true,
+        __requireconfs = {
+            system = false
+        }
+    },
     fmt = {
-        linkdirs = [[C:\Users\Zcaic\Desktop\cy\externals\fmt\lib]],
         links = "fmt",
-        libfiles = [[C:\Users\Zcaic\Desktop\cy\externals\fmt\lib\libfmt.a]],
-        installdir = [[C:\Users\Zcaic\Desktop\cy\externals\fmt]],
-        static = true,
         version = "11.2.0",
+        installdir = [[E:\CXX\xmake_template\externals\fmt]],
+        __enabled = true,
+        __requirestr = "fmt 11.2.0",
+        linkdirs = [[E:\CXX\xmake_template\externals\fmt\lib]],
+        sysincludedirs = [[E:\CXX\xmake_template\externals\fmt\include]],
+        libfiles = [[E:\CXX\xmake_template\externals\fmt\lib\libfmt.a]],
         __requireconfs = {
             system = false
         },
-        sysincludedirs = [[C:\Users\Zcaic\Desktop\cy\externals\fmt\include]],
-        __enabled = true,
-        __requirestr = "fmt 11.2.0"
+        static = true
     },
     python3 = {
+        sysincludedirs = [[D:\miniconda3\envs\py12\Include]],
+        __requirestr = "python3",
+        __enabled = true,
         __requireconfs = {
             system = true
-        },
-        sysincludedirs = [[D:\miniconda3\envs\py12\Include]],
-        __enabled = true,
-        __requirestr = "python3"
+        }
     }
 }

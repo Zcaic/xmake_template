@@ -1,5 +1,6 @@
 {
     packages = {
-        [[C:\Users\Zcaic\Desktop\cy\externals\fmt]]
+        [[E:\CXX\xmake_template\externals\fmt]],
+        [[E:\CXX\xmake_template\externals\eigen]]
     }
 }

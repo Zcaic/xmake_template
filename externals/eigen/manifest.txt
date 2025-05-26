@@ -1,0 +1,27 @@
+{
+    arch = "x86_64",
+    artifacts = {
+        installdir = [[E:\CXX\xmake_template\externals\eigen]]
+    },
+    configs = {
+        debug = false,
+        pic = true,
+        shared = false,
+        toolchains = "clang"
+    },
+    envs = { },
+    kind = "library",
+    mode = "release",
+    name = "eigen",
+    pathenvs = {
+        "LD_LIBRARY_PATH",
+        "PYTHONPATH",
+        "CMAKE_PREFIX_PATH",
+        "PKG_CONFIG_PATH",
+        "PATH",
+        "DYLD_LIBRARY_PATH",
+        "ACLOCAL_PATH"
+    },
+    plat = "mingw",
+    version = "3.4.0"
+}
