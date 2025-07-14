@@ -1,34 +1,54 @@
 {
-    eigen = {
-        __requirestr = "eigen 3.4.0",
-        version = "3.4.0",
-        installdir = [[E:\CXX\xmake_template\externals\eigen]],
-        sysincludedirs = [[E:\CXX\xmake_template\externals\eigen\include]],
-        __enabled = true,
+    python3 = {
+        __requirestr = "python3",
         __requireconfs = {
-            system = false
-        }
+            configs = {
+                shared = true
+            },
+            system = true
+        },
+        links = "python312",
+        envs = {
+            PATH = {
+                [[C:\Users\Zcaic\AppData\Local\.xmake\packages\p\python3\latest\42c0145166044f33bd649c651d4fbfe7\bin]]
+            }
+        },
+        sysincludedirs = [[D:\miniconda3\envs\py12\Include]],
+        linkdirs = [[D:\miniconda3\envs\py12]],
+        __enabled = true
     },
     fmt = {
-        links = "fmt",
-        version = "11.2.0",
-        installdir = [[E:\CXX\xmake_template\externals\fmt]],
-        __enabled = true,
         __requirestr = "fmt 11.2.0",
-        linkdirs = [[E:\CXX\xmake_template\externals\fmt\lib]],
-        sysincludedirs = [[E:\CXX\xmake_template\externals\fmt\include]],
-        libfiles = [[E:\CXX\xmake_template\externals\fmt\lib\libfmt.a]],
         __requireconfs = {
             system = false
         },
-        static = true
+        libfiles = [[E:\CXX\xmake_template\externals\fmt\lib\libfmt.a]],
+        version = "11.2.0",
+        sysincludedirs = [[E:\CXX\xmake_template\externals\fmt\include]],
+        links = "fmt",
+        static = true,
+        linkdirs = [[E:\CXX\xmake_template\externals\fmt\lib]],
+        installdir = [[E:\CXX\xmake_template\externals\fmt]],
+        __enabled = true
     },
-    python3 = {
-        sysincludedirs = [[D:\miniconda3\envs\py12\Include]],
-        __requirestr = "python3",
-        __enabled = true,
+    eigen = {
+        version = "3.4.0",
+        sysincludedirs = [[E:\CXX\xmake_template\externals\eigen\include]],
+        __requirestr = "eigen 3.4.0",
         __requireconfs = {
-            system = true
-        }
+            system = false
+        },
+        installdir = [[E:\CXX\xmake_template\externals\eigen]],
+        __enabled = true
+    },
+    pybind11 = {
+        version = "3.0.0",
+        sysincludedirs = [[E:\CXX\xmake_template\externals\pybind11\include]],
+        __requirestr = "pybind11 3.0.0",
+        __requireconfs = {
+            system = false
+        },
+        installdir = [[E:\CXX\xmake_template\externals\pybind11]],
+        __enabled = true
     }
 }

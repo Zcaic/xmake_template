@@ -1,0 +1,26 @@
+{
+    arch = "x86_64",
+    artifacts = {
+        installdir = [[E:\CXX\xmake_template\externals\pybind11]]
+    },
+    configs = {
+        debug = false,
+        pic = true,
+        shared = false,
+        toolchains = "clang"
+    },
+    envs = { },
+    mode = "release",
+    name = "pybind11",
+    pathenvs = {
+        "PATH",
+        "CMAKE_PREFIX_PATH",
+        "DYLD_LIBRARY_PATH",
+        "ACLOCAL_PATH",
+        "LD_LIBRARY_PATH",
+        "PYTHONPATH",
+        "PKG_CONFIG_PATH"
+    },
+    plat = "mingw",
+    version = "3.0.0"
+}

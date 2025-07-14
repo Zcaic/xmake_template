@@ -1,4 +1,4 @@
-set_project("My_nanobind")
+set_project("My_template")
 
 set_languages("cxx17")
 
@@ -7,6 +7,7 @@ set_config("plat","mingw")
 set_config("archs","x64")
 set_config("toolchain","clang")
 set_config("mode","release")
+set_config("builddir", "build")
 
 add_rules("mode.release","mode.debug")
 
@@ -16,7 +17,11 @@ package("python3")
         import("detect.tools.find_python")
         local py,version = find_python({version=true})
         local inc,err=os.iorunv(py,{"-c","import sysconfig;print(sysconfig.get_path(\"include\"),end=\"\")"})
+        local root,err=os.iorunv(py,{"-c","import sysconfig;print(sysconfig.get_config_var(\"prefix\"),end=\"\")"})
+        local version,err=os.iorunv(py,{"-c","import sysconfig;print(sysconfig.get_config_var(\"VERSION\"),end=\"\")"})
         result.includedirs=inc
+        result.linkdirs=root
+        result.links="python"..version
         -- print(result)
         return result
     end)
@@ -81,15 +86,54 @@ package("eigen")
     end)
 package_end()
 
-add_requires("python3",{system=true })
+package("pybind11")
+    set_urls(path.join(os.projectdir(),"/externals/pybind11-$(version).zip"))
+    add_versions("3.0.0",string.lower("DFE152AF2F454A9D8CD771206C014AECB8C3977822B5756123F29FD488648334"))
+    set_installdir(path.join(os.projectdir(),"/externals/pybind11"))
+
+    on_install("windows|native", "macosx", "linux","mingw", function (package)
+        -- import("detect.tools.find_python3")
+
+        -- local configs = {"-DPYBIND11_TEST=OFF"}
+        -- local python = find_python3()
+        -- if python and path.is_absolute(python) then
+        --     table.insert(configs, "-DPython_EXECUTABLE=" .. python)
+        -- end
+        import("package.tools.cmake").install(package, configs)
+    end)
+package_end()
+
+add_requires("python3",{system=true ,configs = {shared = true}})
 add_requires("fmt 11.2.0",{system=false  })
 add_requires("eigen 3.4.0",{system=false })
+add_requires("pybind11 3.0.0",{system=false })
 
 target("main")
     set_kind("binary")
-    add_files("main.cpp")
+    add_files("src/main.cpp")
     set_targetdir("out")
     add_packages("python3")
     add_packages("fmt")
     add_packages("eigen")
+    add_packages("pybind11")
+    -- add_ldflags("-static", {force = true})
+    -- add_ldflags("-static-libgcc", {force = true})
+    -- add_ldflags("-static-libstdc++", {force = true})
 target_end()
+
+target("example")
+    
+    add_rules("python.module")
+    
+    -- add_shflags("-static-libgcc")
+    -- add_shflags("-static-libstdc++")
+    -- add_shflags("-Wl,-Bstatic -lpthread -Wl,-Bdynamic")
+    add_shflags("-static-libgcc -static-libstdc++ -Wl,-Bstatic -lstdc++ -lpthread -Wl,-Bdynamic ")
+    add_files("src/pymodule.cpp")
+
+    set_targetdir("out")
+    add_packages("python3")
+    add_packages("pybind11")
+
+target_end()
+

@@ -1,31 +1,51 @@
 {
-    tool_target_main_mingw_x86_64_ld = {
-        toolchain_info = {
-            plat = "mingw",
-            cachekey = "clang_arch_x86_64_plat_mingw",
-            name = "clang",
-            arch = "x86_64"
-        },
-        toolname = "clangxx",
-        program = [[D:\Portable\msys64\ucrt64\bin\clang++]]
-    },
-    tool_target_main_mingw_x86_64_cxx = {
-        toolchain_info = {
-            plat = "mingw",
-            cachekey = "clang_arch_x86_64_plat_mingw",
-            name = "clang",
-            arch = "x86_64"
-        },
-        toolname = "clang",
-        program = [[D:\Portable\msys64\ucrt64\bin\clang]]
-    },
     clang_arch_x86_64_plat_mingw = {
         plat = "mingw",
         arch = "x86_64",
         __global = true,
         __checked = {
+            program = [[D:\Portable\msys64\ucrt64\bin\clang.exe]],
+            name = "clang"
+        }
+    },
+    tool_target_main_mingw_x86_64_cxx = {
+        program = [[D:\Portable\msys64\ucrt64\bin\clang]],
+        toolname = "clang",
+        toolchain_info = {
             name = "clang",
-            program = [[D:\Portable\msys64\ucrt64\bin\clang.exe]]
+            arch = "x86_64",
+            cachekey = "clang_arch_x86_64_plat_mingw",
+            plat = "mingw"
+        }
+    },
+    tool_target_main_mingw_x86_64_ld = {
+        program = [[D:\Portable\msys64\ucrt64\bin\clang++]],
+        toolname = "clangxx",
+        toolchain_info = {
+            name = "clang",
+            arch = "x86_64",
+            cachekey = "clang_arch_x86_64_plat_mingw",
+            plat = "mingw"
+        }
+    },
+    tool_target_example_mingw_x86_64_sh = {
+        program = [[D:\Portable\msys64\ucrt64\bin\clang++]],
+        toolname = "clangxx",
+        toolchain_info = {
+            name = "clang",
+            arch = "x86_64",
+            cachekey = "clang_arch_x86_64_plat_mingw",
+            plat = "mingw"
+        }
+    },
+    tool_target_example_mingw_x86_64_cxx = {
+        program = [[D:\Portable\msys64\ucrt64\bin\clang]],
+        toolname = "clang",
+        toolchain_info = {
+            name = "clang",
+            arch = "x86_64",
+            cachekey = "clang_arch_x86_64_plat_mingw",
+            plat = "mingw"
         }
     }
 }

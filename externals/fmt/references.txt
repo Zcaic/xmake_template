@@ -1,4 +1,4 @@
 {
-    ["E:\\CXX\\xmake_template"] = "250526",
+    ["E:\\CXX\\xmake_template"] = "250714",
     ["C:\\Users\\Zcaic\\Desktop\\cy"] = "250525"
 }

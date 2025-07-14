@@ -1,6 +1,7 @@
 {
     packages = {
         [[E:\CXX\xmake_template\externals\fmt]],
-        [[E:\CXX\xmake_template\externals\eigen]]
+        [[E:\CXX\xmake_template\externals\eigen]],
+        [[E:\CXX\xmake_template\externals\pybind11]]
     }
 }
